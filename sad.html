@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broken Hearted Poem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            color: #e74c3c;
+            animation: heartbeat 0.8s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(5);
+            }
+            50% {
+                transform: scale(1.9);
+            }
+            100% {
+                transform: scale(9);
+            }
+        }
+
+        /* Additional sad theme styles */
+        body {
+            background-color: #eaeaea;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #777;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .heart {
+            color: #e74c3c;
+            font-size: 140px;
+        }
+    </style>
+
+    <script>
+        // JavaScript code
+        function toggleHeartBeat() {
+            var heart = document.querySelector('.heart');
+            var animationPaused = window.getComputedStyle(heart).getPropertyValue('animation-play-state') === 'paused';
+
+            if (animationPaused) {
+                heart.style.animationPlayState = 'running';
+            } else {
+                heart.style.animationPlayState = 'paused';
+            }
+        }
+
+        function changeHeartColor() {
+            var heart = document.querySelector('.heart');
+            heart.style.color = "#FF0000"; // Change heart color to red
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>💔😢A Broken Heart😢💔</h1>
+    <p>
+        In the darkest of nights,
+        <br>Where love's flame no longer ignites,
+        <br>I wander lost in memories,
+        <br>Of what once brought me to my knees.
+    </p>
+    <p>
+        A heart once whole, now torn apart,
+        <br>Shattered dreams and a broken heart,
+        <br>Each beat echoes with sorrow's cry,
+        <br>As love's sweet promise fades and dies.
+    </p>
+    <p>
+        I search for solace in the rain,
+        <br>Hoping it will wash away the pain,
+        <br>But the tears that fall cannot replace,
+        <br>The love I lost, the empty space.
+    </p>
+    <p>
+        And so I carry this heavy load,
+        <br>A broken heart, a weary soul,
+        <br>But I'll find strength to heal and mend,
+        <br>And someday, love's light will shine again.
+    </p>
+    <p>
+        <span class="heart">❤</span>
+    </p>
+</div>
+
+<script>
+    // Toggle heartbeat animation when heart is clicked
+    var heart = document.querySelector('.heart');
+    heart.addEventListener('click', function () {
+        toggleHeartBeat();
+        changeHeartColor();
+    });
+</script>
+</body>
+</html>
